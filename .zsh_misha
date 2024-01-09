@@ -1,0 +1,10 @@
+
+
+
+alias edit-zsh="vi ~/.zshrc"
+alias reload-zsh="SOURCE ~/.zshrc"
+
+#   git
+alias gdevelop="gfa; gco develop; groh;"
+alias gast="ga .;g stash"
+alias gasco="gast; gfa; gco "
