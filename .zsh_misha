@@ -1,10 +1,23 @@
-
-
+# vim: set filetype=sh :
 
 alias edit-zsh="vi ~/.zshrc"
 alias reload-zsh="SOURCE ~/.zshrc"
+alias edit-hosts="sudo vi /etc/hosts"
+alias edit-p10k="vi ~/.p10k.zsh"
+alias edit-vim="vi ~/.vimrc"
 
-#   git
-alias gdevelop="gfa; gco develop; groh;"
-alias gast="ga .;g stash"
-alias gasco="gast; gfa; gco "
+#--------- GIT
+alias grbod="gfa; git rebase origin/develop"
+alias gdevelop="gfa && gco develop && groh"
+alias gast="git add . && git stash"
+alias gasco="gast && gfa && gco "
+alias gastrohstp="gast && gfa && groh && gstp"
+alias gastrbodstp="gast && gfa && grbod && gstp"
+alias gastcodrohstpcb="gast && gfa && gco develop && groh && gstp && gcb"
+alias grbo="gfa && git rebase --onto "
+alias gls="g log --oneline"
+alias itsme="ssh-add $SSH_DIR/$SSH_NAME"
+
+#--------- JAVA
+alias j11="sdk use java 11.0.20-ms; java --version"
+alias j17="sdk use java 17.0.8.1-ms; java --version"
