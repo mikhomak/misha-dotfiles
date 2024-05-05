@@ -1,10 +1,26 @@
 # vim: set filetype=sh :
 
-alias edit-zsh="vi ~/.zshrc"
-alias reload-zsh="SOURCE ~/.zshrc"
+plugins=(
+git
+)
+
+#--------- VARIABLES
+export SSH_DIR="~/.ssh"
+
+
+#--------- EDITS
+
+alias reload-zsh="source ~/.zshrc"
 alias edit-hosts="sudo vi /etc/hosts"
-alias edit-p10k="vi ~/.p10k.zsh"
-alias edit-vim="vi ~/.vimrc"
+
+alias edit-misha-zsh="vi $MISHA/.zsh_misha"
+alias edit-misha-p10k="vi $MISHA/.p10k_misha.zsh"
+alias edit-misha-vim="vi $MISHA/.vim_misha"
+alias edit-misha-kitty="vi $MISHA/kitty.config"
+
+#--------- CD
+alias cdmisha="cd $MISHA"
+#--------- OTHER
 
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
