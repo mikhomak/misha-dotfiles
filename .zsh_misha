@@ -2,11 +2,14 @@
 
 plugins=(
 git
+zsh-syntax-highlighting
 )
+
+#Add this to .zshrc in the begging
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #--------- VARIABLES
 export SSH_DIR="~/.ssh"
-
 
 #--------- EDITS
 
