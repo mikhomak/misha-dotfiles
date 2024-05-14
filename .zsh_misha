@@ -3,6 +3,9 @@
 plugins=(
 git
 zsh-syntax-highlighting
+zsh-autosuggestionso
+colored-man-pages
+alias-tips
 )
 
 #Add this to .zshrc in the begging
