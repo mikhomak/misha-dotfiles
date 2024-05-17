@@ -1679,7 +1679,7 @@
   }
 
   function prompt_hello() {
-	p10k segment -b 1 -f 3 -i '🤖' -t 'ガンダム'
+	p10k segment -b 1 -f 3 -i '🤖' -t 'ガンダム RX-78-2'
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
