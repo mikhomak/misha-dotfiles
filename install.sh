@@ -15,3 +15,6 @@ echo "export MISHA=$BASEDIR" > $HOME/.zshenv
 
 echo "Installing p10k..."
 ln -s -f $BASEDIR/.p10k.zsh $HOME/.p10k.zsh
+
+echo "Installing kitty..."
+ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
