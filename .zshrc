@@ -29,10 +29,10 @@ export SSH_DIR="~/.ssh"
 alias reload-zsh="source ~/.zshrc"
 alias edit-hosts="sudo vi /etc/hosts"
 
-alias edit-misha-zsh="vi $MISHA/.zshrc"
-alias edit-misha-p10k="vi $MISHA/.p10k_misha.zsh"
-alias edit-misha-vim="vi $MISHA/.vimrc"
-alias edit-misha-kitty="vi $MISHA/kitty.config"
+alias edit-zsh="vi $MISHA/.zshrc"
+alias edit-p10k="vi $MISHA/.p10k.zsh"
+alias edit-vim="vi $MISHA/.vimrc"
+alias edit-kitty="vi $MISHA/kitty.config"
 
 #--------- CD
 alias cdmisha="cd $MISHA"
