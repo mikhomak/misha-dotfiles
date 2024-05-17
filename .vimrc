@@ -1,3 +1,4 @@
+syntax on
 set background=dark
 set clipboard=unnamed
 set number
@@ -7,3 +8,4 @@ set tabstop=4
 set showcmd
 set showmode
 set hlsearch
+
