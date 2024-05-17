@@ -13,4 +13,5 @@ ln -s -f $BASEDIR/.zshrc $HOME/.zshrc
 echo "export MISHA=$BASEDIR" > $HOME/.zshenv
 (ls $HOME/.zshrc && echo "Zshrc is installed") || echo "Zshrc is not installed!"
 
-
+echo "Installing p10k..."
+ln -s -f $BASEDIR/.p10k.zsh $HOME/.p10k.zsh
