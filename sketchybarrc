@@ -2,7 +2,7 @@
 # It is meant to be changed and configured, as it is intentionally kept sparse.
 # For a (much) more advanced configuration example see my dotfiles:
 # https://github.com/FelixKratz/dotfiles
-source "$CONFIG_DIR/colors.sh"
+source "$HOME/.config/.colors"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
 ##### Bar Appearance #####

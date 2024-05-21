@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source "$CONFIG_DIR/colors.sh"
+source "$HOME/.config/.colors"
 
 if [ $SELECTED = true ]; then
 	sketchybar --set "$NAME" background.color=$WIN98_BRIGHT_GREY \

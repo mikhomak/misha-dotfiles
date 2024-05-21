@@ -19,10 +19,15 @@ echo "export MISHA=$BASEDIR" > $HOME/.zshenv
 echo "-------"
 
 
-
 echo "Installing p10k..."
 ln -s -f $BASEDIR/.p10k.zsh $HOME/.p10k.zsh
 (test -f $HOME/.p10k.zsh && echo "P10K is installed ✅") || echo "P10K is not installed!❌"
+echo "-------"
+
+
+echo "Installing common colours..."
+ln -s -f $BASEDIR/.colors $HOME/.config/.colors
+(test -f $HOME/.config/.colors && echo "Colors is installed ✅") || echo "Colors is not installed!❌"
 echo "-------"
 
 
@@ -47,8 +52,12 @@ echo "-------"
 
 echo "Installing sketchybar plugins..."
 ln -s -f $BASEDIR/sketchybar/plugins/*.sh $HOME/.config/sketchybar/plugins
-ln -s -f $BASEDIR/sketchybar/colors.sh $HOME/.config/sketchybar/colors.sh
 (test -d $HOME/.config/sketchybar/plugins && echo "Sketchybar plugins is installed ✅") || echo "Sketchybar plugins is not installed!❌"
+echo "-------"
+
+echo "Installing borders..."
+ln -s -f $BASEDIR/bordersrc $HOME/.config/borders/bordersrc
+(test -f $HOME/.config/borders/bordersrc && echo "Borders is installed ✅") || echo "Borders is not installed!❌"
 echo "-------"
 
 

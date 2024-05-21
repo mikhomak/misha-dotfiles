@@ -1,5 +1,5 @@
 #!/bin/sh
-source "$CONFIG_DIR/colors.sh"
+source "$HOME/.config/.colors"
 
 if [ "$SENDER" = "front_app_switched" ]; then
   sketchybar --set "$NAME" label="٩(◕‿◕)۶ <<< $INFO >>> ٩(◕‿◕)۶" \

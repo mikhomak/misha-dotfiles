@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source "$HOME/.config/.colors"
+
+options=(
+	style=square
+	width=10.0
+	hidpi=on
+	active_color=$WIN98_CYAN
+	inactive_color=$WIN98_DARK_GREY
+)
+
+borders "${options[@]}"
