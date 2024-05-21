@@ -26,6 +26,13 @@ ln -s -f $BASEDIR/.p10k.zsh $HOME/.p10k.zsh
 echo "-------"
 
 
+
+echo "Installing wezTerm..."
+ln -s -f $BASEDIR/.wezterm.lua $HOME/.wezterm.lua
+(test -f $HOME/.wezterm.lua && echo "wezterm is installed ✅") || echo "Wezterm is not installed!❌"
+echo "-------"
+
+
 echo "Installing kitty..."
 ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
 (test -f $HOME/.config/kitty/kitty.conf && echo "Kitty is installed ✅") || echo "Kitty is not installed!❌"
