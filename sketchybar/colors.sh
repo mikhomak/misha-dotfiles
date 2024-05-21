@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export BLACK=0xff000000
+export WHITE=0xffffffff
+
+export WIN98_BLUE=0xff0000ff
+export WIN98_GREY=0xffbebebe
+export WIN98_BRIGHT_GREY=0xffD9DFD6
+export WIN98_DARK_GREY=0xff7e7e7e
+export WIN98_CYAN=0xff06ffff

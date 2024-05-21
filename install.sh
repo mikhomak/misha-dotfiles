@@ -39,3 +39,17 @@ ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
 echo "-------"
 
 
+echo "Installing sketchybar..."
+ln -s -f $BASEDIR/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+(test -f $HOME/.config/sketchybar/sketchybarrc && echo "Sketchybar is installed ✅") || echo "Sketchybar is not installed!❌"
+echo "-------"
+
+
+echo "Installing sketchybar plugins..."
+ln -s -f $BASEDIR/sketchybar/plugins/*.sh $HOME/.config/sketchybar/plugins
+ln -s -f $BASEDIR/sketchybar/colors.sh $HOME/.config/sketchybar/colors.sh
+(test -d $HOME/.config/sketchybar/plugins && echo "Sketchybar plugins is installed ✅") || echo "Sketchybar plugins is not installed!❌"
+echo "-------"
+
+
+
