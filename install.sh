@@ -1,8 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 echo "installing symlinks"
 echo "Current directory - ${PWD}"
 BASEDIR=${PWD}
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    MSYS_NT*)   machine=Git;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+echo "Maching that is running is [$machine]"
 echo "Starting installation...."
 echo "-------"
 
@@ -49,6 +60,7 @@ ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
 (test -f $HOME/.config/kitty/kitty.conf && echo "Kitty is installed ✅") || echo "Kitty is not installed!❌"
 echo "-------"
 
+if [ "$machine" = "Mac" ]; then
 
 echo "Installing sketchybar..."
 ln -s -f $BASEDIR/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
@@ -66,5 +78,5 @@ ln -s -f $BASEDIR/bordersrc $HOME/.config/borders/bordersrc
 (test -f $HOME/.config/borders/bordersrc && echo "Borders is installed ✅") || echo "Borders is not installed!❌"
 echo "-------"
 
-
+fi
 
