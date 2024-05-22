@@ -14,7 +14,7 @@ echo "-------"
 
 echo "Installing zsh..."
 ln -s -f $BASEDIR/.zshrc $HOME/.zshrc
-echo "export MISHA=$BASEDIR" > $HOME/.zshenv
+echo "export MISHA=$BASEDIR" >> $HOME/.zshenv
 (test -f $HOME/.zshrc && echo "Zshrc is installed ✅") || echo "zshrc is not installed!❌"
 echo "-------"
 

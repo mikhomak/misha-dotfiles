@@ -20,7 +20,7 @@ height=33 \
 color=$WIN98_GREY \
 border_color=$BLACK \
 border_width=1 \
-topmost=on \
+topmost=off \
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
