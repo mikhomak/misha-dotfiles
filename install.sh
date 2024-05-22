@@ -30,6 +30,12 @@ ln -s -f $BASEDIR/.colors $HOME/.config/.colors
 (test -f $HOME/.config/.colors && echo "Colors is installed ✅") || echo "Colors is not installed!❌"
 echo "-------"
 
+echo "Installing common images..."
+mkdir -p $HOME/.config/imgs
+ln -s -f $BASEDIR/imgs/* $HOME/.config/imgs/
+(test -d $HOME/.config/imgs && echo "Images are installed ✅") || echo "Images are not installed!❌"
+echo "-------"
+
 
 
 echo "Installing wezTerm..."

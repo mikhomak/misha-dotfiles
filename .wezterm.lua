@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font '3270 Nerd Font'
 config.font_size = 16.0
 -- For example, changing the color scheme:
-config.color_scheme = 'catppuccin-latte'
+config.color_scheme = 'primary'
 config.window_decorations = "NONE"
 config.keys = {
   -- This will create a new split and run your default program inside it

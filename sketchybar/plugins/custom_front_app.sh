@@ -2,7 +2,7 @@
 source "$HOME/.config/.colors"
 
 if [ "$SENDER" = "front_app_switched" ]; then
-  sketchybar --set "$NAME" label="٩(◕‿◕)۶ <<< $INFO >>> ٩(◕‿◕)۶" \
+  sketchybar --set "$NAME" label="<<< $INFO >>>" \
 	label.color=$WHITE \
 	label.font="AurulentSansM Nerd Font Propo"\
 	label.font.size=14 \

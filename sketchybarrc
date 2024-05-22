@@ -5,6 +5,9 @@
 source "$HOME/.config/.colors"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
+
+SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
+FONT_FACE="AurulentSansM Nerd Font"
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar.
 # These are only some of the options available. For all options see:
@@ -46,8 +49,8 @@ sketchybar --default "${default[@]}"
 # to indicate active and available mission control spaces.
 
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-CUSTOM_ICONS=("󰨡 " "" "" "󱥁" "5" "6" "7" "8" "9" "10")
-CUSTOM_LABELS=("Start" "インターネット" "Code" "チャット" "5" "6" "7" "8" "9" "10")
+CUSTOM_ICONS=("󰨡 " "" "" "󱥁" "" "6" "7" "8" "9" "10")
+CUSTOM_LABELS=("Start" "インターネット" "Code" "チャット" "Other" "6" "7" "8" "9" "10")
 for i in "${!SPACE_ICONS[@]}"
 do
   sid="$(($i+1))"
@@ -76,13 +79,11 @@ done
 ##### Adding Left Items #####
 # We add some regular items to the left side of the bar, where
 # only the properties deviating from the current defaults need to be set
-
-sketchybar --add item chevron left \
-           --set chevron label="🌊頑張って!!" label.drawing=on \
-           --add item front_app center \
+source "$PLUGIN_DIR/image.sh" left
+sketchybar --add item front_app center \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/custom_front_app.sh" \
            --subscribe front_app front_app_switched
-
+source "$PLUGIN_DIR/image.sh" right
 ##### Adding Right Items #####
 # In the same way as the left items we can add items to the right side.
 # Additional position (e.g. center) are available, see:
@@ -102,6 +103,28 @@ sketchybar --add item clock right \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
+
+
+sketchybar --add event spotify_change $SPOTIFY_EVENT \
+    --add item spotify right \
+    --set spotify \
+    icon= \
+    icon.y_offset=1 \
+    icon.font="$FONT_FACE" \
+	icon.font.size=18 \
+    label.drawing=off \
+	background.color=$WIN98_BRIGHT_GREY \
+	background.shadow.drawing=on \
+	background.shadow.color=$WHITE \
+	background.shadow.angle=220 \
+	background.shadow.distance=2 \
+	background.border_color=$BLACK \
+	background.border_width=1\
+    label.padding_left=3 \
+	label.font.size=7 \
+	background.height=25 \
+    script="$PLUGIN_DIR/spotify.sh" \
+    --subscribe spotify spotify_change mouse.clicked
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
