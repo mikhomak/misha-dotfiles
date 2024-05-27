@@ -4,11 +4,35 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+local home_dir = os.getenv("HOME")
+
 config.font = wezterm.font '3270 Nerd Font'
 config.font_size = 16.0
 -- For example, changing the color scheme:
-config.color_scheme = 'primary'
+-- config.color_scheme = 'primary'
+config.color_scheme = 'DanQing (base16)'
 config.window_decorations = "NONE"
+config.hide_tab_bar_if_only_one_tab = true
+
+config.inactive_pane_hsb = {
+  saturation = 0.1,
+  brightness = 0.2,
+}
+
+config.background = {
+  {
+    source = {
+      File = home_dir .. '/.config/imgs/eva_2.gif',
+    },
+width = '100%',
+height='Contain',
+    repeat_x = 'Mirror',
+    hsb = {
+	brightness = 0.1,
+},
+    attachment = { Parallax = 0.1 },
+  },
+}
 config.keys = {
   -- This will create a new split and run your default program inside it
   {
