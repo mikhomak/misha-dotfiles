@@ -45,8 +45,7 @@ ln -s -f $BASEDIR/.colors $HOME/.config/.colors
 echo "-------"
 
 echo "Installing common images..."
-mkdir -p $HOME/.config/imgs
-ln -s -f $BASEDIR/imgs/* $HOME/.config/imgs/
+ln -s -f $BASEDIR/imgs $HOME/.config/
 (test -d $HOME/.config/imgs && echo "Images are installed ✅") || echo "Images are not installed!❌"
 echo "-------"
 

@@ -10,13 +10,13 @@ local config = wezterm.config_builder()
 	config.font_size = 16.0
 	-- For example, changing the color scheme:
 	-- config.color_scheme = 'primary'
-	config.color_scheme = 'DanQing (base16)'
+config.color_scheme = 'Rasi (terminal.sexy)'
 	config.window_decorations = "RESIZE"
 	config.hide_tab_bar_if_only_one_tab = true
 
 	config.inactive_pane_hsb = {
-		saturation = 0.1,
-		brightness = 0.2,
+		saturation = 0.7,
+		brightness = 0.8,
 	}
 
 config.background = {
