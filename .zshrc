@@ -36,6 +36,7 @@ alias edit-kitty="vi $MISHA/kitty.config"
 
 #--------- CD
 alias cdmisha="cd $MISHA"
+alias cdssh="cd $SSH_DIR"
 #--------- OTHER
 
 #--------- GIT
@@ -49,7 +50,8 @@ alias gastcodrohstpcb="gast && gfa && gco develop && groh && gstp && gcb"
 alias grbo="gfa && git rebase --onto "
 alias gls="g log --oneline"
 alias itsme="ssh-add $SSH_DIR/$SSH_NAME"
-
+alias gac!pf="ga . && gc! && gpf"
+alias gacmsgpf='f(){ga . && gcmsg "$1" && gpf};f'
 #--------- JAVA
 alias j11="sdk use java 11.0.20-ms; java --version"
 alias j17="sdk use java 17.0.8.1-ms; java --version"
