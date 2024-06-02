@@ -23,6 +23,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #--------- VARIABLES
 export SSH_DIR="~/.ssh"
+export H="$HOME"
 
 #--------- EDITS
 
@@ -37,6 +38,7 @@ alias edit-kitty="vi $MISHA/kitty.config"
 #--------- CD
 alias cdmisha="cd $MISHA"
 alias cdssh="cd $SSH_DIR"
+alias cdh="cd $H"
 #--------- OTHER
 
 #--------- GIT
@@ -50,7 +52,7 @@ alias gastcodrohstpcb="gast && gfa && gco develop && groh && gstp && gcb"
 alias grbo="gfa && git rebase --onto "
 alias gls="g log --oneline"
 alias itsme="ssh-add $SSH_DIR/$SSH_NAME"
-alias gac!pf="ga . && gc! && gpf"
+alias gacpf="ga . && gc! && gpf"
 alias gacmsgpf='f(){ga . && gcmsg "$1" && gpf};f'
 #--------- JAVA
 alias j11="sdk use java 11.0.20-ms; java --version"
