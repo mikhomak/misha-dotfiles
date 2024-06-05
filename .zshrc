@@ -52,7 +52,7 @@ alias gastcodrohstpcb="gast && gfa && gco develop && groh && gstp && gcb"
 alias grbo="gfa && git rebase --onto "
 alias gls="g log --oneline"
 alias itsme="ssh-add $SSH_DIR/$SSH_NAME"
-alias gacpf="ga . && gc! && gpf"
+alias gacpf="ga . && gc! --no-edit && gpf"
 alias gacmsgpf='f(){ga . && gcmsg "$1" && gpf};f'
 #--------- JAVA
 alias j11="sdk use java 11.0.20-ms; java --version"

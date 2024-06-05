@@ -79,11 +79,11 @@ done
 ##### Adding Left Items #####
 # We add some regular items to the left side of the bar, where
 # only the properties deviating from the current defaults need to be set
-source "$PLUGIN_DIR/image.sh" left
+source "$PLUGIN_DIR/image.sh" left "gundam_small.jpg"
 sketchybar --add item front_app center \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/custom_front_app.sh" \
            --subscribe front_app front_app_switched
-source "$PLUGIN_DIR/image.sh" right
+source "$PLUGIN_DIR/image.sh" right "char_2_left.jpg"
 ##### Adding Right Items #####
 # In the same way as the left items we can add items to the right side.
 # Additional position (e.g. center) are available, see:
