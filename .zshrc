@@ -7,7 +7,17 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshenv
 
-
+#-------- MACHINE
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    MSYS_NT*)   machine=Git;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+export MACHINE=$machine
 #-------- PLUGINS
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 plugins=(
@@ -60,13 +70,15 @@ alias j17="sdk use java 17.0.8.1-ms; java --version"
 
 
 
-
+if [[ test -d /opt/homebrew/opt/powerlevel10k ]]; then
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
+
 source ~/.bash_profile;
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
