@@ -70,14 +70,15 @@ alias j17="sdk use java 17.0.8.1-ms; java --version"
 
 
 
-if [[ test -d /opt/homebrew/opt/powerlevel10k ]]; then
+if [[ -d /opt/homebrew/opt/powerlevel10k ]]; then
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source $H/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 source ~/.bash_profile;
 
