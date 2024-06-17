@@ -51,6 +51,7 @@ alias cdssh="cd $SSH_DIR"
 alias cdh="cd $H"
 #--------- OTHER
 alias cmd="cmd.exe /c "
+alias start_ssh_agent="eval `ssh-agent`"
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
 alias gdevelop="gfa && gco develop && groh"
