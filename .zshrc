@@ -50,7 +50,7 @@ alias cdmisha="cd $MISHA"
 alias cdssh="cd $SSH_DIR"
 alias cdh="cd $H"
 #--------- OTHER
-
+alias cmd="cmd.exe /c "
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
 alias gdevelop="gfa && gco develop && groh"
