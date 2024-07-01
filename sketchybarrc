@@ -49,8 +49,8 @@ sketchybar --default "${default[@]}"
 # to indicate active and available mission control spaces.
 
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-CUSTOM_ICONS=("󰨡 " "" "" "󱥁" "" "6" "7" "8" "9" "10")
-CUSTOM_LABELS=("Start" "インターネット" "Code" "チャット" "Other" "6" "7" "8" "9" "10")
+CUSTOM_ICONS=("󰨡 " "" "" "󱥁" "" "󰍺" "7" "8" "9" "10")
+CUSTOM_LABELS=("Start" "インターネット" "Code" "チャット" "Other" "2 モニター" "7" "8" "9" "10")
 for i in "${!SPACE_ICONS[@]}"
 do
   sid="$(($i+1))"
