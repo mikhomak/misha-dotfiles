@@ -15,6 +15,7 @@ esac
 
 echo "Maching that is running is [$machine]"
 echo "Starting installation...."
+echo "Installing it with the win98 theme"
 echo "-------"
 
 
@@ -50,6 +51,8 @@ ln -s -f $BASEDIR/imgs $HOME/.config/
 echo "-------"
 
 
+echo "Installing terminalls!!!! Yay!"
+echo "-------"
 
 echo "Installing wezTerm..."
 ln -s -f $BASEDIR/.wezterm.lua $HOME/.wezterm.lua
@@ -58,8 +61,13 @@ echo "-------"
 
 
 echo "Installing kitty..."
-ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
+if [ -d $HOME/.config/kitty ]; 
+then
+ ln -s -f $BASEDIR/kitty.conf $HOME/.config/kitty/kitty.conf
 (test -f $HOME/.config/kitty/kitty.conf && echo "Kitty is installed ✅") || echo "Kitty is not installed!❌"
+else
+	echo "did you install kitty?"
+fi
 echo "-------"
 
 if [ "$machine" = "Mac" ]; then
