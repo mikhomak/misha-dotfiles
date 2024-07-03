@@ -97,5 +97,23 @@ ln -s -f $BASEDIR/bordersrc $HOME/.config/borders/bordersrc
 (test -f $HOME/.config/borders/bordersrc && echo "Borders is installed ✅") || echo "Borders is not installed!❌"
 echo "-------"
 
+
+echo "Installing yabai..."
+if [ -d $HOME/.config/yabai ];
+then
+else
+	mkdir $HOME/.config/yabai 
+fi
+ln -s -f $BASEDIR/yabairc $HOME/.config/yabai/yabairc
+(test -f $HOME/.config/yabai/yabairc && echo "Yabai is installed ✅") || echo "Yabai is not installed!❌"
+echo "-------"
+
+echo "Installing SKHD..."
+ln -s -f $BASEDIR/.skhdrc $HOME/.skhdrc
+(test -f $HOME/.skhdrc && echo "SKHD is installed ✅") || echo "SKHD is not installed!❌"
+echo "-------"
+
+
+
 fi
 
