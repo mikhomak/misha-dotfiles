@@ -15,7 +15,6 @@ esac
 
 echo "Maching that is running is [$machine]"
 echo "Starting installation...."
-echo "Installing it with the win98 theme"
 echo "-------"
 
 
@@ -73,7 +72,17 @@ echo "-------"
 if [ "$machine" = "Mac" ]; then
 
 echo "Installing sketchybar..."
-ln -s -f $BASEDIR/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+echo "Please choose the theme [win98] (W)/(w), [cute] (C)/(c)"
+read theme
+case $theme in
+	'win98'|'W'|'w')
+		echo "Installing win98 theme"
+		ln -s -f $BASEDIR/sketchybarrc_win98 $HOME/.config/sketchybar/sketchybarrc
+	;;
+	*)
+		ln -s -f $BASEDIR/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+	;;
+esac
 (test -f $HOME/.config/sketchybar/sketchybarrc && echo "Sketchybar is installed ✅") || echo "Sketchybar is not installed!❌"
 echo "-------"
 
