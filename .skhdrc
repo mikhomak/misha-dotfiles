@@ -1,7 +1,7 @@
 # open terminal
 cmd - return : open -n -a "WezTerm"
 
-# open chrome 
+# open firefox 
 cmd + shift - return : open -n -a "Firefox" 
 
 # moves focus between windows in the current focused display
@@ -9,6 +9,11 @@ alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
+
+alt - left : yabai -m window --focus west
+alt - down : yabai -m window --focus south
+alt - up : yabai -m window --focus north
+alt - right : yabai -m window --focus east
 
 # moves focus between spaces 
 alt - 1 : yabai -m space --focus 1
@@ -84,11 +89,22 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+shift + alt - left : yabai -m window --swap west
+shift + alt - down : yabai -m window --swap south
+shift + alt - up : yabai -m window --swap north
+shift + alt - right : yabai -m window --swap east
+
+
 # move window
 shift + cmd - h : yabai -m window --warp west
 shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
 shift + cmd - l : yabai -m window --warp east
+
+shift + cmd - left : yabai -m window --warp west
+shift + cmd - down : yabai -m window --warp south
+shift + cmd - up : yabai -m window --warp north
+shift + cmd - right : yabai -m window --warp east
 
 # send window to a space 
 shift + alt - 1 : yabai -m window --space 1
@@ -112,11 +128,21 @@ ctrl + alt - j : yabai -m window --resize bottom:0:40
 ctrl + alt - k : yabai -m window --resize top:0:-40
 ctrl + alt - l : yabai -m window --resize right:40:0
 
+ctrl + alt - left : yabai -m window --resize left:-40:0
+ctrl + alt - down : yabai -m window --resize bottom:0:40
+ctrl + alt - up : yabai -m window --resize top:0:-40
+ctrl + alt - right : yabai -m window --resize right:40:0
+
 # decrease window size
 ctrl + alt + cmd - h : yabai -m window --resize left:40:0
 ctrl + alt + cmd - j : yabai -m window --resize bottom:0:-40
 ctrl + alt + cmd - k : yabai -m window --resize top:0:40
 ctrl + alt + cmd - l : yabai -m window --resize right:-40:0
+
+ctrl + alt + cmd - left : yabai -m window --resize left:40:0
+ctrl + alt + cmd - down : yabai -m window --resize bottom:0:-40
+ctrl + alt + cmd - up : yabai -m window --resize top:0:40
+ctrl + alt + cmd - right : yabai -m window --resize right:-40:0
 
 # restart yabai
 ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
