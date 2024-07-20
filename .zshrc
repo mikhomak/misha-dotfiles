@@ -79,7 +79,10 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+if [[ -d $H/.oh-my-zsh/custom/themes/powerlevel10k/ ]]; then
 source $H/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 source ~/.bash_profile;
 
