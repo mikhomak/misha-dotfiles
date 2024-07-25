@@ -114,6 +114,17 @@ ln -s -f $BASEDIR/.skhdrc $HOME/.skhdrc
 echo "-------"
 
 
-
 fi
 
+if [ "$machine" = "Linux" ]; then
+	echo "Installing Hyprland..."
+	ln -s -f $BASEDIR/hypr $HOME/.config/
+	(test -d $HOME/.config/hypr && echo "Hyperland is installed ✅") || echo "Hyperland is not installed!❌"
+	echo "-------"
+
+	echo "Installing Waybar..."
+	ln -s -f $BASEDIR/waybar $HOME/.config/
+	(test -d $HOME/.config/waybar && echo "Waybar is installed ✅") || echo "Waybar is not installed!❌"
+	echo "-------"
+
+fi

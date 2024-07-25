@@ -84,6 +84,11 @@ if [[ -d $H/.oh-my-zsh/custom/themes/powerlevel10k/ ]]; then
 source $H/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
+
+if [[ -d /usr/share/zsh-theme-powerlevel10k/ ]]; then
+	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+fi
+
 source ~/.bash_profile;
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
