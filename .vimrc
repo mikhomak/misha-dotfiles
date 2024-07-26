@@ -16,7 +16,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 filetype on
 filetype plugin on
 filetype indent on
-
+filetype plugin indent on
 " PLUGINS ---------------------------------------------------------------- {{{
 call plug#begin()
 
