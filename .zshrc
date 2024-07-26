@@ -18,13 +18,14 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 export MACHINE=$machine
+
 #-------- PLUGINS
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 plugins=(
 git
 zsh-syntax-highlighting
-zsh-autosuggestionso
-colored-man-pages
+zsh-autosuggestions
+colored-terminalman-pages
 alias-tips
 )
 
@@ -70,7 +71,7 @@ alias j11="sdk use java 11.0.20-ms; java --version"
 alias j17="sdk use java 17.0.8.1-ms; java --version"
 
 
-
+#-------- Power level 10k
 if [[ -d /opt/homebrew/opt/powerlevel10k ]]; then
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
   export NVM_DIR="$HOME/.nvm"
@@ -88,6 +89,8 @@ fi
 if [[ -d /usr/share/zsh-theme-powerlevel10k/ ]]; then
 	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
+
+#--------Other
 
 source ~/.bash_profile;
 
