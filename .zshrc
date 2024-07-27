@@ -69,7 +69,8 @@ alias gacmsgpf='f(){ga . && gcmsg "$1" && gpf};f'
 #--------- JAVA
 alias j11="sdk use java 11.0.20-ms; java --version"
 alias j17="sdk use java 17.0.8.1-ms; java --version"
-
+#-------- LINUX
+alias audio_mixer="alsamixer -V -h"
 
 #-------- Power level 10k
 if [[ -d /opt/homebrew/opt/powerlevel10k ]]; then
