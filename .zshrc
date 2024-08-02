@@ -35,21 +35,27 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 #--------- VARIABLES
 export SSH_DIR="~/.ssh"
 export H="$HOME"
+export DOW="$H/Downloads"
+export WORK="$H/work"
+export PROJECTS="$H/Projects"
 
 #--------- EDITS
 
 alias reload-zsh="source ~/.zshrc"
-alias edit-hosts="sudo vi /etc/hosts"
+alias edit-hosts="sudo vim /etc/hosts"
 
-alias edit-zsh="vi $MISHA/.zshrc"
-alias edit-p10k="vi $MISHA/.p10k.zsh"
-alias edit-vim="vi $MISHA/.vimrc"
-alias edit-kitty="vi $MISHA/kitty.config"
+alias edit-zsh="vim $MISHA/.zshrc"
+alias edit-p10k="vim $MISHA/.p10k.zsh"
+alias edit-vim="vim $MISHA/.vimrc"
+alias edit-kitty="vim $MISHA/kitty.config"
 
 #--------- CD
 alias cdmisha="cd $MISHA"
 alias cdssh="cd $SSH_DIR"
 alias cdh="cd $H"
+alias cddow="cd $DOW"
+alias cdwork="cd $WORK"
+alias cdp="cd $PROJECTS"
 #--------- OTHER
 alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
