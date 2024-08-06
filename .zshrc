@@ -56,9 +56,11 @@ alias cdh="cd $H"
 alias cddow="cd $DOW"
 alias cdwork="cd $WORK"
 alias cdp="cd $PROJECTS"
+
 #--------- OTHER
 alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
+
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
 alias gdevelop="gfa && gco develop && groh"
@@ -72,9 +74,11 @@ alias gls="g log --oneline"
 alias itsme="ssh-add $SSH_DIR/$SSH_NAME"
 alias gacpf="ga . && gc! --no-edit && gpf"
 alias gacmsgpf='f(){ga . && gcmsg "$1" && gpf};f'
+
 #--------- JAVA
 alias j11="sdk use java 11.0.20-ms; java --version"
 alias j17="sdk use java 17.0.8.1-ms; java --version"
+
 #-------- LINUX
 alias audio_mixer="alsamixer -V -h"
 
