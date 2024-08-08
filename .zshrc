@@ -38,6 +38,7 @@ export H="$HOME"
 export DOW="$H/Downloads"
 export WORK="$H/work"
 export PROJECTS="$H/Projects"
+export HBS="hybris/bin/platform"
 
 #--------- EDITS
 
@@ -56,6 +57,7 @@ alias cdh="cd $H"
 alias cddow="cd $DOW"
 alias cdwork="cd $WORK"
 alias cdp="cd $PROJECTS"
+alias cdhbs="cd $HBS" 
 
 #--------- OTHER
 alias cmd="cmd.exe /c "
