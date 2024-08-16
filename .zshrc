@@ -63,6 +63,10 @@ alias cdhbp="cd $HBP"
 alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
 
+#--------- VIM
+alias vi="nvim"
+alias vim="nvim"
+
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
 alias gdevelop="gfa && gco develop && groh"
