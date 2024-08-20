@@ -49,6 +49,11 @@ ln -s -f $BASEDIR/imgs $HOME/.config/
 (test -d $HOME/.config/imgs && echo "Images are installed ✅") || echo "Images are not installed!❌"
 echo "-------"
 
+echo "Installing wallpapers..."
+ln -s -f $BASEDIR/wallpapers $HOME/.config/
+(test -d $HOME/.config/wallpapers && echo "Wallpapers are installed ✅") || echo "Wallpapers are not installed!❌"
+echo "-------"
+
 
 echo "Installing terminalls!!!! Yay!"
 echo "-------"
