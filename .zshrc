@@ -89,12 +89,14 @@ alias j17="sdk use java 17.0.8.1-ms; java --version"
 alias audio_mixer="alsamixer -V -h"
 
 #-------- Power level 10k
-if [[ -d /opt/homebrew/opt/powerlevel10k ]]; then
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -d $HOMEBREW_PREFIX/share/powerlevel10k ]]; then
+source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme 
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
 fi
+
+#--- Linux
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 

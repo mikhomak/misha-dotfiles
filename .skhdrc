@@ -1,8 +1,8 @@
 # open terminal
-cmd - return : open -n -a "WezTerm"
+alt - q : open -n -a "WezTerm"
 
 # open firefox 
-cmd + shift - return : open -n -a "Firefox" 
+alt + shift - q : open -n -a "Firefox" 
 
 # moves focus between windows in the current focused display
 alt - h : yabai -m window --focus west
@@ -28,13 +28,13 @@ alt - 9 : yabai -m space --focus 9
 alt - 0  : yabai -m space --focus 10
 
 # delete focused space
-alt - q : yabai -m space --destroy
+#alt - c : yabai -m space --destroy
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
 
 # close window
-alt - x : yabai -m window --close
+alt - c : yabai -m window --close
 
 # minimize window
 alt - m : yabai -m window --minimize
@@ -57,8 +57,7 @@ alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
 # toggle window fullscreen zoom
-alt - f : yabai -m window --focus mouse && \
-          yabai -m window --toggle zoom-fullscreen
+alt - f :  yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
