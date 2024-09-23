@@ -52,7 +52,7 @@
 	"misha" = import ./home.nix;
 	};
 	};
-
+  users.user.misha.shell = pkgs.zsh
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -60,6 +60,7 @@
 	enable = true;
 	xwayland.enable = true;
   };
+	programs.zsh.enable = true;
 
   environment.sessionVariables = {
 	WLN_NO_HARDWARE_CURSOR = "1";
@@ -78,7 +79,6 @@
 	firefox
 	kitty
 	wezterm
-	oh-my-zsh
 	zsh-powerlevel10k
 
 	home-manager
@@ -90,11 +90,12 @@
 	sdkmanager
 	nodejs_22
 	docker
-	discord
 	cargo
+	python
 
 	flameshot
 	spotify-player
+	discord
 
 	libnotify
   ];

@@ -102,10 +102,10 @@ ln -s -f $BASEDIR/bordersrc $HOME/.config/borders/bordersrc
 (test -f $HOME/.config/borders/bordersrc && echo "Borders is installed ✅") || echo "Borders is not installed!❌"
 echo "-------"
 
-
 echo "Installing yabai..."
 if [ -d $HOME/.config/yabai ];
 then
+	echo "all good"
 else
 	mkdir $HOME/.config/yabai 
 fi
@@ -118,17 +118,17 @@ ln -s -f $BASEDIR/.skhdrc $HOME/.skhdrc
 (test -f $HOME/.skhdrc && echo "SKHD is installed ✅") || echo "SKHD is not installed!❌"
 echo "-------"
 
-
 fi
 
 if [ "$machine" = "Linux" ]; then
 	echo "Installing Hyprland..."
-	ln -s -f $BASEDIR/hypr $HOME/.config/
+	rm -rf $HOME/.config/hypr
+	ln -snf $BASEDIR/hypr $HOME/.config/
 	(test -d $HOME/.config/hypr && echo "Hyperland is installed ✅") || echo "Hyperland is not installed!❌"
 	echo "-------"
 
 	echo "Installing Waybar..."
-	ln -s -f $BASEDIR/waybar $HOME/.config/
+	ln -snf $BASEDIR/waybar $HOME/.config/
 	(test -d $HOME/.config/waybar && echo "Waybar is installed ✅") || echo "Waybar is not installed!❌"
 	echo "-------"
 
