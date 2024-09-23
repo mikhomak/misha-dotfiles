@@ -52,15 +52,29 @@
 	"misha" = import ./home.nix;
 	};
 	};
-  users.user.misha.shell = pkgs.zsh
+
+  users.defaultUserShell = pkgs.zsh;
+users.users.misha.shell = pkgs.zsh;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  programs.hyprland = {
+  programs = {
+  hyprland = {
 	enable = true;
 	xwayland.enable = true;
   };
-	programs.zsh.enable = true;
+zsh= {
+enable = true;
+promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+ohMyZsh = {
+          enable = true;
+          plugins = [
+            "git"
+	    "alias-tips"
+          ];
+        };
+};
+};
 
   environment.sessionVariables = {
 	WLN_NO_HARDWARE_CURSOR = "1";
@@ -74,12 +88,16 @@
 
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+	neovim
 	vim
 	git
 	firefox
 	kitty
 	wezterm
+	
+	oh-my-zsh
 	zsh-powerlevel10k
+	zsh-git-prompt
 
 	home-manager
 	nix-search-cli
@@ -88,14 +106,16 @@
 	dunst
 
 	sdkmanager
+	jetbrains.idea-community
 	nodejs_22
 	docker
 	cargo
-	python
+	python3
 
 	flameshot
 	spotify-player
 	discord
+	vscode
 
 	libnotify
   ];

@@ -25,9 +25,11 @@
   };
 
   home.sessionVariables = {
+	XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME   = "$HOME/var/lib";
+    XDG_CACHE_HOME  = "$HOME/var/cache";
     # EDITOR = "emacs";
   };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

@@ -4,7 +4,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
+if [[ -d $ZSH ]]; then
+	source $ZSH/oh-my-zsh.sh
+	source $ZSH/plugins/git/git.plugin.zsh
+fi
 source $HOME/.zshenv
 
 #-------- MACHINE
@@ -20,7 +23,6 @@ esac
 export MACHINE=$machine
 
 #-------- PLUGINS
-source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 plugins=(
 git
 zsh-syntax-highlighting
@@ -101,7 +103,7 @@ fi
 
 
 if [[ -d $H/.oh-my-zsh/custom/themes/powerlevel10k/ ]]; then
-source $H/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+	source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 
@@ -110,8 +112,9 @@ if [[ -d /usr/share/zsh-theme-powerlevel10k/ ]]; then
 fi
 
 #--------Other
-
-source ~/.bash_profile;
+if [[ -f $HOME/.bash_profile ]]; then
+	source ~/.bash_profile;
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
