@@ -8,11 +8,6 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
      };
-
-    dotfiles = {
-	url = "github:mikhomak/misha-dotfiles";
-	flake = false;
-};
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

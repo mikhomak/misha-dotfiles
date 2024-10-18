@@ -7,6 +7,7 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   home.packages = [
+	  pkgs.jdk17
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

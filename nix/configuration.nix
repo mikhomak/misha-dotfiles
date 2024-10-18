@@ -42,7 +42,7 @@
   users.users.misha = {
     isNormalUser = true;
     description = "misha";
-    extraGroups = [ "networkmanager" "wheel" "sudo" ];
+    extraGroups = [ "networkmanager" "wheel" "sudo" "docker"];
     packages = with pkgs; [];
   };
 
@@ -57,6 +57,14 @@
 users.users.misha.shell = pkgs.zsh;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+# Docker
+virtualisation.docker.enable = true;
+virtualisation.docker.rootless = {
+  enable = true;
+  setSocketVariable = true;
+};
+virtualisation.docker.enableOnBoot = true;
 
   programs = {
   hyprland = {
@@ -105,6 +113,8 @@ ohMyZsh = {
  	waybar	
 	dunst
 
+	unzip
+
 	sdkmanager
 	jetbrains.idea-community
 	nodejs_22
@@ -116,6 +126,7 @@ ohMyZsh = {
 	spotify-player
 	discord
 	vscode
+	obsidian
 
 	libnotify
   ];
