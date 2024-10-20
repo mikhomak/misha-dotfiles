@@ -82,6 +82,9 @@ ohMyZsh = {
           ];
         };
 };
+	nix-ld = {
+	enable = true;
+	};
 };
 
   environment.sessionVariables = {

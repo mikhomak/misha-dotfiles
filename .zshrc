@@ -41,6 +41,7 @@ export DOW="$H/Downloads"
 export WORK="$H/work"
 export PROJECTS="$H/Projects"
 export HBP="hybris/bin/platform"
+export MISHA_NIX="$MISHA/nix"
 
 #--------- EDITS
 
@@ -60,7 +61,7 @@ alias cddow="cd $DOW"
 alias cdwork="cd $WORK"
 alias cdp="cd $PROJECTS"
 alias cdhbp="cd $HBP" 
-
+alias cdnix="cd $MISHA_NIX"
 #--------- OTHER
 alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
