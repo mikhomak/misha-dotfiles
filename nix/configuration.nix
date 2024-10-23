@@ -5,7 +5,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-        inputs.home-manager.nixosModules.default
+      ./hosts.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -124,6 +125,7 @@ ohMyZsh = {
 	docker
 	cargo
 	python3
+	openvpn
 
 	flameshot
 	spotify-player
