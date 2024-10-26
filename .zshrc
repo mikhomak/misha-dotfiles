@@ -42,7 +42,7 @@ export WORK="$H/work"
 export PROJECTS="$H/Projects"
 export HBP="hybris/bin/platform"
 export MISHA_NIX="$MISHA/nix"
-
+export GIT_EDITOR=vim
 #--------- EDITS
 
 alias reload-zsh="source ~/.zshrc"
