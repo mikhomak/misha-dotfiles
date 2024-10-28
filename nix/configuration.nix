@@ -110,6 +110,7 @@ ohMyZsh = {
 	oh-my-zsh
 	zsh-powerlevel10k
 	zsh-git-prompt
+	nerdfonts
 
 	home-manager
 	nix-search-cli
@@ -132,6 +133,7 @@ ohMyZsh = {
 	discord
 	vscode
 	obsidian
+	kitty-themes
 
 	libnotify
   ];
