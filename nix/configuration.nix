@@ -109,6 +109,11 @@
 	};
 
 # $ nix search wget
+
+	fonts.packages = with pkgs; [
+		nerdfonts
+	];
+
 	environment.systemPackages = with pkgs; [
 		neovim
 			vim
@@ -120,7 +125,6 @@
 			oh-my-zsh
 			zsh-powerlevel10k
 			zsh-git-prompt
-			nerdfonts
 
 			home-manager
 			nix-search-cli
@@ -130,6 +134,7 @@
 
 			unzip
 			alsa-utils
+			killall
 
 			sdkmanager
 			jetbrains.idea-community
