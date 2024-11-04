@@ -79,15 +79,22 @@
 				enable = true;
 				plugins = [
 					"git"
-					"themes"
-					"emoji"
-					"emoji-clock"
+						"themes"
+						"emoji"
+						"emoji-clock"
 				];
 			};
 		};
 		nix-ld = {
 			enable = true;
 		};
+	};
+
+	programs.steam = {
+		enable = true;
+		remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+			dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+			localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
 	};
 
 	environment.sessionVariables = {
@@ -117,7 +124,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
-			neovim
+		neovim
 			vim
 			git
 			firefox
