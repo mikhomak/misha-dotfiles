@@ -45,6 +45,7 @@
 		description = "misha";
 		extraGroups = [ "networkmanager" "wheel" "sudo" "docker" "audio"];
 		packages = with pkgs; [];
+		shell = pkgs.zsh;
 	};
 
 	home-manager = {
@@ -55,7 +56,6 @@
 	};
 
 	users.defaultUserShell = pkgs.zsh;
-	users.users.misha.shell = pkgs.zsh;
 	nixpkgs.config.allowUnfree = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -79,7 +79,9 @@
 				enable = true;
 				plugins = [
 					"git"
-						"alias-tips"
+					"themes"
+					"emoji"
+					"emoji-clock"
 				];
 			};
 		};
