@@ -150,6 +150,8 @@
 			nodejs_22
 			docker
 			cargo
+			rustc
+			gcc
 			python3
 			openvpn
 
