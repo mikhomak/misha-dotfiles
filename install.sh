@@ -1,6 +1,5 @@
 #!/bin/sh
 
-echo "installing symlinks"
 echo "Current directory - ${PWD}"
 BASEDIR=${PWD}
 unameOut="$(uname -s)"
@@ -15,8 +14,24 @@ esac
 
 echo "Maching that is running is [$machine]"
 echo "Starting installation...."
+
+
+echo "-----------------------------------------------------------------------------"
+echo "Creating directories"
+echo "-----------------------------------------------------------------------------"
+
+mkdir -p ~/projects ~/work ~/Downloads ~/.ssh ~/.config 
+echo "$HOME"
+echo "----$HOME/projects"
+echo "----$HOME/work"
+echo "----$HOME/Downloads"
+echo "----$HOME/.ssh"
+echo "----$HOME/.config"
 echo "-------"
 
+echo "-----------------------------------------------------------------------------"
+echo "installing symlinks for dotfiles"
+echo "-----------------------------------------------------------------------------"
 
 echo "Installing vim..."
 ln -s -f $BASEDIR/.vimrc $HOME/.vimrc
