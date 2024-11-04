@@ -117,7 +117,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
-		neovim
+			neovim
 			vim
 			git
 			firefox

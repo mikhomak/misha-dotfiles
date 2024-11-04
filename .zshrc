@@ -67,8 +67,8 @@ alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
 
 #--------- VIM
-alias vi="nvim"
-alias vim="nvim"
+alias vi="nvim -u ~/.vimrc"
+alias vim="nvim -u ~/.vimrc"
 
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
