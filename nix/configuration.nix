@@ -114,8 +114,9 @@
 		alsa.support32Bit = true;
 		pulse.enable = true;
 # If you want to use JACK applications, uncomment this
-#jack.enable = true;
+jack.enable = true;
 	};
+
 
 # $ nix search wget
 
@@ -144,16 +145,19 @@
 			unzip
 			alsa-utils
 			killall
+			lsof
+			xclip
 
 			sdkmanager
 			jetbrains.idea-community
 			nodejs_22
 			docker
-			cargo
-			rustc
 			gcc
+			rustup
 			python3
 			openvpn
+			sqlx-cli
+			go
 
 			flameshot
 			spotify-player
