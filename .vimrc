@@ -25,11 +25,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'nvim-tree/nvim-web-devicons' " optional
-Plug 'nvim-tree/nvim-tree.lua'
-Plug 'tpope/vim-sensible'
-Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 call plug#end()
 " }}}

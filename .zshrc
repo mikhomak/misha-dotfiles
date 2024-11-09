@@ -65,7 +65,7 @@ alias cdnix="cd $MISHA_NIX"
 #--------- OTHER
 alias cmd="cmd.exe /c "
 alias start_ssh_agent="eval `ssh-agent`"
-
+alias clip="xclip -sel c < "
 #--------- VIM
 alias vi="nvim -u ~/.vimrc"
 alias vim="nvim -u ~/.vimrc"
