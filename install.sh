@@ -69,6 +69,12 @@ ln -s -f $BASEDIR/wallpapers $HOME/.config/
 (test -d $HOME/.config/wallpapers && echo "Wallpapers are installed ✅") || echo "Wallpapers are not installed!❌"
 echo "-------"
 
+echo "Installing discord..."
+ln -s -f $BASEDIR/discord/settings.json $HOME/.config/discord/settings.json
+(test -f $HOME/.config/discord/settings.json && echo "Discord is installed ✅") || echo "discord is not installed!❌"
+echo "-------"
+
+
 
 echo "Installing terminalls!!!! Yay!"
 echo "-------"

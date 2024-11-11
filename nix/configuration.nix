@@ -141,6 +141,7 @@
 
 			waybar	
 			dunst
+			swww
 
 			unzip
 			alsa-utils
