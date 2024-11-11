@@ -1,7 +1,7 @@
 * {
     border: none;
-    border-radius: 5px;
-    font-family: "JetBrainsMono Nerd Font";
+    border-radius: 0;
+    font-family: "Hurmit Nerd Font";
     font-size: 14px;
     min-height: 10px;
 }
@@ -57,8 +57,8 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: #4774bf;
-    color: #FDE6D5;
+    background: #CCC5B9;
+    color: #252422;
     margin-left: 3px;
     padding-left: 12px;
     padding-right: 12px;
@@ -71,53 +71,55 @@ tooltip {
 }
 
 #workspaces {
-    background-color: #082C6C;
+    background-color: #403D39;
     padding: 0px;
 }
 
 #window {
-    background-color: #082C6C;
-    color: #38ef7d; 
+    background-color: #EB5E28;
+    color: #252422; 
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 #tray {
-   background-color: #405253;
+   background-color: #403D39;
    color: #ebdbb2; 
 }
 
 #cava {
-	color:red;
+	color:#EB5E28;
+	background-color: #252422;
 	margin-right: 10px;
+	padding-bottom: 0;
 }
 
 #pulseaudio {
-    background-color: #405253;
+    background-color: #EB5E28;
 	margin-left: 5px;
 	margin-right: 5px;
-    color: #ebdbb2;
+    color: #252422;
 }
 
-#cpu {
-   background-color: #286076;
-   color: #ebdbb2;
+#cpu,
+#memory,
+#temperature {
+   background-color: #403D39;
+   color: #CCC5B9;
 }
 
-#memory {
-   background-color: #286076;
-   color: #ebdbb2;
+#memory{
+	color: #EB5E28;
 }
 
 #clock {
-   background-color: #286076;
+   background-color: #252422;
    color: #ebdbb2;
    margin-left: 10px;
    margin-right: 10px;
 }
 
 #temperature { 
-   background-color: #286076;
    color: #ebdbb2;
    margin-right: 5px;
 }
@@ -127,22 +129,21 @@ tooltip {
 }
 
 #disk {
-    background-color: #052E44;
-    color: #ebdbb2;
+    background-color: #252422;
+    color: #FFFCF2;
 }
 
 #battery {
-   background-color: #5E2A7C;
-   color: #FDE6D5;
+   background-color: #CCC5B9;
+   color: #252422;
    margin-right: 5px;
 }
 
 #network {
-  background-color: #5E2A7C;
-  color: #FDE6D5;
+  background-color: #CCC5B9;
+  color: #252422;
   margin-right: 5px;
 }
-
 
 
 #custom-control-center {

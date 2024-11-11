@@ -41,22 +41,22 @@
 
 
 	"hyprland/window": {
-		"format": "󱄅 {}",
-		"separate-outputs": true,
-		"max-length": 50,
+		"format": "󰨡 --[[ <b>{title}</b> ]]-- 󰨡 ",
+		"separate-outputs" : true,
 		"rewrite": {
-			"(.*) Firefox": "Firefox 󰈹",
-			"(.*) - Visual Studio Code": "$1 󰨞",
-			"(.*)Visual Studio Code": "Code 󰨞",
-			"(.*)Spotify": "Spotify 󰓇",
-			"(.*)Steam": "Steam 󰓓"
+			"(.*) — Mozilla Firefox(.*)": "󰨡 --[[ <b>Firefox</b> ]]-- 󰨡 "
 		}
 	},
 
 	"hyprland/workspaces": {
 		"format" : "{id}",
 		"on-click": "activate",
-		"active-only": false
+		"active-only": false,
+		"persistent-workspaces": {
+			"1": [], 
+			"2": [], 
+			"3": [] 
+		}
 	},
 
 	"cpu": {
