@@ -6,15 +6,19 @@
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
+
 	"modules-left": [
 		"hyprland/workspaces",
+		"pulseaudio",
 		"clock",
-		"tray",
-		"pulseaudio"
+		"cava",
+		"tray"
 	],
+
 	"modules-center": [
 		"hyprland/window"
 	],
+
 	"modules-right": [
 		"battery",
 		"network",
@@ -22,128 +26,125 @@
 		"memory",
 		"temperature",
 		"disk"
-			],
+	],
+
+	"network": {
+		"tooltip": true,
+		"format-wifi": "󱚸 {signalStrength}%",
+		"format-ethernet": "<span foreground='#FDE6D5'>  {bandwidthDownBytes}</span> <span foreground='#FDE6D5'>  {bandwidthUpBytes}</span>",
+		"tooltip-format": "<span foreground='#FDE6D5'>  {bandwidthDownBytes}</span> <span foreground='#FDE6D5'>  {bandwidthUpBytes}</span>\nNetwork: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+		"format-linked": "󰈀 {ifname} (No IP)",
+		"format-disconnected": " 󰖪 ",
+		"tooltip-format-disconnected": "Disconnected",
+		"interval": 2
+	},
 
 
-			"network": {
-				"tooltip": true,
-				"format-wifi": "󱚸 {signalStrength}%",
-				"format-ethernet": "<span foreground='#FDE6D5'>  {bandwidthDownBytes}</span> <span foreground='#FDE6D5'>  {bandwidthUpBytes}</span>",
-				"tooltip-format": "<span foreground='#FDE6D5'>  {bandwidthDownBytes}</span> <span foreground='#FDE6D5'>  {bandwidthUpBytes}</span>\nNetwork: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-				"format-linked": "󰈀 {ifname} (No IP)",
-				"format-disconnected": " 󰖪 ",
-				"tooltip-format-disconnected": "Disconnected",
-				"interval": 2
-			},
+	"hyprland/window": {
+		"format": "󱄅 {}",
+		"separate-outputs": true,
+		"max-length": 50,
+		"rewrite": {
+			"(.*) Firefox": "Firefox 󰈹",
+			"(.*) - Visual Studio Code": "$1 󰨞",
+			"(.*)Visual Studio Code": "Code 󰨞",
+			"(.*)Spotify": "Spotify 󰓇",
+			"(.*)Steam": "Steam 󰓓"
+		}
+	},
 
+	"hyprland/workspaces": {
+		"format" : "{id}",
+		"on-click": "activate",
+		"active-only": false
+	},
 
-			"hyprland/window": {
-				"format": "󱄅 {}",
-				"separate-outputs": true,
-				"max-length": 50,
-				"rewrite": {
-					"(.*) Firefox": "Firefox 󰈹",
-					"(.*) - Visual Studio Code": "$1 󰨞",
-					"(.*)Visual Studio Code": "Code 󰨞",
-					"(.*)Spotify": "Spotify 󰓇",
-					"(.*)Steam": "Steam 󰓓"
-				}
-			},
+	"cpu": {
+		"interval": 10,
+		"format": "󰍛 {usage}%",
+		"format-alt": "{icon0}{icon1}{icon2}{icon3}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+	},
 
-			"hyprland/workspaces": {
-				"disable-scroll": true,
-				"all-outputs": true,
-				"on-click": "activate",
-				"persistent_workspaces": {
-					"1": [],
-					"2": [],
-					"3": []
-				}
-			},
+	"clock" : {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}",
+		"format" : "[----{:%H:%M}----]"
+	},
 
-			"cpu": {
-				"interval": 10,
-				"format": "󰍛  {usage}%",
-				"format-alt": "{icon0}{icon1}{icon2}{icon3}",
-				"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-			},
+	"memory": {
+		"interval": 30,
+		"format-alt": "󰾅 {used}GB",
+		"max-length": 30,
+		"tooltip": true,
+		"format": "-[  {used:0.1f}GB/{total:0.1f}GB ]-"
+	},
 
-			"clock" : {
-				"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-				"format-alt": "{:%Y-%m-%d}",
-				"format" : "[-{:%H:%M}-]"
-			},
+	"temperature": {
+		"format": "{temperatureC}°C "
+	},    
 
-			"memory": {
-				"interval": 30,
-				"format": "󰾆  {percentage}%",
-				"format-alt": "󰾅  {used}GB",
-				"max-length": 30,
-				"tooltip": true,
-				"tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
-			},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
 
-			"temperature": {
-				"format": "{temperatureC}°C  "
-			},    
+	"pulseaudio": {
+		"format": "{icon} {volume}",
+		"format-muted": "婢",
+		"on-click": "pavucontrol -t 3",
+		"tooltip-format": "{icon} {desc} // {volume}%",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		}
+	},
 
-			"battery": {
-				"states": {
-					"good": 95,
-					"warning": 30,
-					"critical": 20
-				},
-				"format": "{icon} {capacity}%",
-				"format-charging": " {capacity}%",
-				"format-plugged": " {capacity}%",
-				"format-alt": "{time} {icon}",
-				"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-			},
+	"cava": {
+		"framerate": 30,
+		"autosens": 1,
+		"bars": 14,
+		"lower_cutoff_freq": 50,
+		"higher_cutoff_freq": 10000,
+		"method": "pulse",
+		"source": "auto",
+		"stereo": true,
+		"bar_delimiter": 0,
+		"noise_reduction": 0.77,
+		"input_delay": 2,
+		"hide_on_silence" : false,
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+		"actions": {
+			"on-click-right": "mode"
+		}
+	},
 
-			"pulseaudio": {
-				"format": "{icon} {volume}",
-				"format-muted": "婢",
-				"on-click": "pavucontrol -t 3",
-				"tooltip-format": "{icon} {desc} // {volume}%",
-				"scroll-step": 5,
-				"format-icons": {
-					"headphone": "",
-					"hands-free": "",
-					"headset": "",
-					"phone": "",
-					"portable": "",
-					"car": "",
-					"default": ["", "", ""]
-				}
-			},
+	"tray": {
+		"icon-size": 20,
+		"spacing": 9
+	},
 
-			"tray": {
-				"icon-size": 20,
-				"spacing": 9
-			},
-
-			"disk": {
-				"interval": 30,
-				"format": "  {used}/{total}",
-				"path": "/home",
-				"tooltip": true,
-				"tooltip-format": "{used}/{total} => {path} {percentage_used}%"
-			},
-
-
-// modules for padding //
-
-"custom/left": {
-	"format": " ",
-	"interval" : "once",
-	"tooltip": false
-},
-
-"custom/right": {
-	"format": " ",
-	"interval" : "once",
-	"tooltip": false
-}
+	"disk": {
+		"interval": 30,
+		"format": "  /home {used}/{total}",
+		"path": "/home",
+		"tooltip": true,
+		"tooltip-format": "{used}/{total} => {path} {percentage_used}%"
+	}
 
 }
 
