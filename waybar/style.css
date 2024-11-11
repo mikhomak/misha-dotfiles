@@ -12,6 +12,7 @@ window#waybar {
 }
 
 #cpu,
+#clock,
 #memory,
 #temperature,
 #tray,
@@ -99,6 +100,12 @@ tooltip {
 }
 
 #memory {
+   background-color: #286076;
+   color: #ebdbb2;
+   border-radius: 0;
+}
+
+#clock {
    background-color: #286076;
    color: #ebdbb2;
    border-radius: 0;
