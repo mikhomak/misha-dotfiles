@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source "$HOME/.config/.colors"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
