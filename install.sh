@@ -103,10 +103,10 @@ read theme
 case $theme in
 	'win98'|'W'|'w')
 		echo "Installing win98 theme"
-		ln -s -f $BASEDIR/sketchybarrc_win98 $HOME/.config/sketchybar/sketchybarrc
+		ln -s -f $BASEDIR/mac/sketchybarrc_win98 $HOME/.config/sketchybar/sketchybarrc
 	;;
 	*)
-		ln -s -f $BASEDIR/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+		ln -s -f $BASEDIR/mac/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
 	;;
 esac
 (test -f $HOME/.config/sketchybar/sketchybarrc && echo "Sketchybar is installed ✅") || echo "Sketchybar is not installed!❌"
@@ -114,12 +114,12 @@ echo "-------"
 
 
 echo "Installing sketchybar plugins..."
-ln -s -f $BASEDIR/sketchybar/plugins/*.sh $HOME/.config/sketchybar/plugins
+ln -s -f $BASEDIR/mac/sketchybar/plugins/*.sh $HOME/.config/sketchybar/plugins
 (test -d $HOME/.config/sketchybar/plugins && echo "Sketchybar plugins is installed ✅") || echo "Sketchybar plugins is not installed!❌"
 echo "-------"
 
 echo "Installing borders..."
-ln -s -f $BASEDIR/bordersrc $HOME/.config/borders/bordersrc
+ln -s -f $BASEDIR/mac/bordersrc $HOME/.config/borders/bordersrc
 (test -f $HOME/.config/borders/bordersrc && echo "Borders is installed ✅") || echo "Borders is not installed!❌"
 echo "-------"
 
@@ -130,12 +130,12 @@ then
 else
 	mkdir $HOME/.config/yabai 
 fi
-ln -s -f $BASEDIR/yabairc $HOME/.config/yabai/yabairc
+ln -s -f $BASEDIR/mac/yabairc $HOME/.config/yabai/yabairc
 (test -f $HOME/.config/yabai/yabairc && echo "Yabai is installed ✅") || echo "Yabai is not installed!❌"
 echo "-------"
 
 echo "Installing SKHD..."
-ln -s -f $BASEDIR/.skhdrc $HOME/.skhdrc
+ln -s -f $BASEDIR/mac/.skhdrc $HOME/.skhdrc
 (test -f $HOME/.skhdrc && echo "SKHD is installed ✅") || echo "SKHD is not installed!❌"
 echo "-------"
 
@@ -144,12 +144,12 @@ fi
 if [ "$machine" = "Linux" ]; then
 	echo "Installing Hyprland..."
 	rm -rf $HOME/.config/hypr
-	ln -snf $BASEDIR/hypr $HOME/.config/
+	ln -snf $BASEDIR/linux/hypr $HOME/.config/
 	(test -d $HOME/.config/hypr && echo "Hyperland is installed ✅") || echo "Hyperland is not installed!❌"
 	echo "-------"
 
 	echo "Installing Waybar..."
-	ln -snf $BASEDIR/waybar $HOME/.config/
+	ln -snf $BASEDIR/linux/waybar $HOME/.config/
 	(test -d $HOME/.config/waybar && echo "Waybar is installed ✅") || echo "Waybar is not installed!❌"
 	echo "-------"
 
