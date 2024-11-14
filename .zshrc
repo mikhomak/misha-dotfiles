@@ -41,7 +41,7 @@ export DOW="$H/Downloads"
 export WORK="$H/work"
 export PROJECTS="$H/projects"
 export HBP="hybris/bin/platform"
-export MISHA_NIX="$MISHA/nix"
+export MISHA_NIX="$MISHA/linux/nix"
 export GIT_EDITOR=vim
 #--------- EDITS
 
