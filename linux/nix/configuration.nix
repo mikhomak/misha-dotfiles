@@ -166,6 +166,7 @@
 			vscode
 			obsidian
 			kitty-themes
+			vlc
 
 			libnotify
 			];
