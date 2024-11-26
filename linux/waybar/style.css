@@ -139,6 +139,10 @@ tooltip {
    margin-right: 5px;
 }
 
+#battery.critical {
+   color: red;
+}
+
 #network {
   background-color: #CCC5B9;
   color: #252422;
