@@ -1,23 +1,23 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "Hurmit Nerd Font";
-    font-size: 14px;
-    min-height: 10px;
+	border: none;
+	border-radius: 0;
+	font-family: "Hurmit Nerd Font";
+	font-size: 14px;
+	min-height: 10px;
 }
 
 window#waybar {
-  background: rgba(21, 18, 27, 0);
+	background: rgba(21, 18, 27, 0);
 }
 
 .modules-right {
-    margin: 0 5px 0 0;
+	margin: 0 5px 0 0;
 }
 .modules-center {
-    margin: 0 0 0 0;
+	margin: 0 0 0 0;
 }
 .modules-left {
-    margin: 0 0 0 5px;
+	margin: 0 0 0 5px;
 }
 
 
@@ -35,56 +35,56 @@ window#waybar {
 #disk,
 #custom-control-center,
 #network {
-   padding: 4px 4px;
-   opacity: 1;
+	padding: 4px 4px;
+	opacity: 1;
 }
 
 tooltip {
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #11111b;
 }
 
 #workspaces button {
-    box-shadow: none;
-    text-shadow: none;
-    padding: 0px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color: #d5c4a1;
+	box-shadow: none;
+	text-shadow: none;
+	padding: 0px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: #d5c4a1;
 }
 
 #workspaces button.active {
-    background: #CCC5B9;
-    color: #252422;
-    margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 3px;
+	background: #CCC5B9;
+	color: #252422;
+	margin-left: 3px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-right: 3px;
 }
 
 #workspaces button:hover {
-    background: #b16286;
-    border: none;
+	background: #b16286;
+	border: none;
 }
 
 #workspaces {
-    background-color: #403D39;
-    padding: 0px;
+	background-color: #403D39;
+	padding: 0px;
 }
 
 #window {
-    background-color: #EB5E28;
-    color: #252422; 
+	background-color: #EB5E28;
+	color: #252422; 
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 #tray {
-   background-color: #403D39;
-   color: #ebdbb2; 
+	background-color: #403D39;
+	color: #ebdbb2; 
 }
 
 #cava {
@@ -95,17 +95,17 @@ tooltip {
 }
 
 #pulseaudio {
-    background-color: #EB5E28;
+	background-color: #EB5E28;
 	margin-left: 5px;
 	margin-right: 5px;
-    color: #252422;
+	color: #252422;
 }
 
 #cpu,
 #memory,
 #temperature {
-   background-color: #403D39;
-   color: #CCC5B9;
+	background-color: #403D39;
+	color: #CCC5B9;
 }
 
 #memory{
@@ -113,44 +113,67 @@ tooltip {
 }
 
 #clock {
-   background-color: #252422;
-   color: #ebdbb2;
-   margin-left: 10px;
-   margin-right: 10px;
+	background-color: #252422;
+	color: #ebdbb2;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #temperature { 
-   color: #ebdbb2;
-   margin-right: 5px;
+	color: #ebdbb2;
+	margin-right: 5px;
 }
 
 #temperature.critical {
-    color: #ff0000;
+	color: #ff0000;
 }
 
 #disk {
-    background-color: #252422;
-    color: #FFFCF2;
+	background-color: #252422;
+	color: #FFFCF2;
 }
 
 #battery {
-   background-color: #CCC5B9;
-   color: #252422;
-   margin-right: 5px;
+	background-color: #CCC5B9;
+	color: #252422;
+	margin-right: 5px;
 }
 
-#battery.critical {
-   color: red;
+#battery.warning:not(.charging) {
+	color:#EB5E28;
+	animation-name            : blink;
+	animation-duration        : 0.5s;
+	animation-timing-function : linear;
+	animation-iteration-count : infinite;
+	animation-direction       : alternate;
+}
+
+#battery.critical:not(.charging) {
+	color: red;
+	animation-name            : blink;
+	animation-duration        : 0.5s;
+	animation-timing-function : linear;
+	animation-iteration-count : infinite;
+	animation-direction       : alternate;
 }
 
 #network {
-  background-color: #CCC5B9;
-  color: #252422;
-  margin-right: 5px;
+	background-color: #CCC5B9;
+	color: #252422;
+	margin-right: 5px;
 }
 
 
 #custom-control-center {
-  background-color: #C53C2C;
-  color: #FDE5D4;
+	background-color: #C53C2C;
+	color: #FDE5D4;
+}
+
+@keyframes blink
+{
+	to
+	{
+		color           : black;
+		background-color: red;
+	}
 }
