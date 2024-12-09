@@ -64,6 +64,9 @@ alias cdhbp="cd $HBP"
 alias cdnix="cd $MISHA_NIX"
 #--------- OTHER
 alias cmd="cmd.exe /c "
+alias copy_glazewm="sudo cp -r $MISHA/windows/glazewm/config.yaml $WINDOWS/.glzr/glazewm/config.yaml"
+alias copy_zebar="sudo cp -r $MISHA/windows/zebar/* $WINDOWS/.glzr/zebar/starter"
+alias copy_win_config="copy_glazewm && copy_zebar"
 alias start_ssh_agent="eval `ssh-agent`"
 alias clip="xclip -sel c < "
 #--------- VIM
