@@ -131,6 +131,7 @@
 			firefox
 			kitty
 			wezterm
+			tmux
 
 			oh-my-zsh
 			zsh-powerlevel10k
@@ -149,7 +150,6 @@
 			lsof
 			xclip
 
-			sdkmanager
 			jetbrains.idea-community
 			nodejs_22
 			docker
