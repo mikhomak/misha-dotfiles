@@ -1,3 +1,12 @@
+
+# Linux/NixOs
+## Apps
+* NixOs
+
+
+## Instalation
+run `install.sh` after the installation of nix config
+  
 # MacOs
 ![macos](https://raw.githubusercontent.com/mikhomak/misha-dotfiles/main/imgs-examples/macOs_example.png)
 
@@ -7,8 +16,9 @@
 * oh my zsh
 * power10k
 * NerdFonts
-* rectangle
+* yabai
 * borders
 
 ## Instalation
 run `install.sh`
+
