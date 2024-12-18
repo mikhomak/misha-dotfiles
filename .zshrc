@@ -43,6 +43,7 @@ export PROJECTS="$H/projects"
 export HBP="hybris/bin/platform"
 export MISHA_NIX="$MISHA/linux/nix"
 export GIT_EDITOR=vim
+export MISHA_OBSIDIAN="$PROJECTS/misha-obsidian/"
 #--------- EDITS
 
 alias reload-zsh="source ~/.zshrc"
@@ -62,6 +63,7 @@ alias cdwork="cd $WORK"
 alias cdp="cd $PROJECTS"
 alias cdhbp="cd $HBP" 
 alias cdnix="cd $MISHA_NIX"
+alias cdobsidian="cd $MISHA_OBSIDIAN"
 #--------- OTHER
 alias cmd="cmd.exe /c "
 alias copy_glazewm="sudo cp -r $MISHA/windows/glazewm/config.yaml $WINDOWS/.glzr/glazewm/config.yaml"
