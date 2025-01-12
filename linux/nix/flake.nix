@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	superfile.url="github:yorukot/superfile";
 
     home-manager = {
        url = "github:nix-community/home-manager";

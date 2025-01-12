@@ -130,52 +130,60 @@
 		nerdfonts
 	];
 
-	environment.systemPackages = with pkgs; [
-		neovim
-			vim
-			git
-			firefox
-			kitty
-			wezterm
-			tmux
+		environment.systemPackages = with pkgs; [
+# Main
+			neovim
+				vim
+				git
+				firefox
+				kitty
+				wezterm
+				tmux
 
-			oh-my-zsh
-			zsh-powerlevel10k
-			zsh-git-prompt
+# ZSH and shell
+				oh-my-zsh
+				zsh-powerlevel10k
+				zsh-git-prompt
 
-			home-manager
-			nix-search-cli
+# Nix
+				home-manager
+				nix-search-cli
 
-			waybar	
-			dunst
-			swww
+# Desktop and tiling manager stuff
+				waybar	
+				dunst
+				swww
 
-			unzip
-			alsa-utils
-			killall
-			lsof
-			xclip
+# CLI
+				unzip
+				alsa-utils
+				killall
+				lsof
+				xclip
 
-			jetbrains.idea-community
-			nodejs_22
-			docker
-			gcc
-			rustup
-			python3
-			openvpn
-			sqlx-cli
-			go
+# Developing
+				jetbrains.idea-community
+				nodejs_22
+				docker
+				gcc
+				rustup
+				python3
+				openvpn
+				sqlx-cli
+				go
 
-			flameshot
-			spotify-player
-			discord
-			vscode
-			obsidian
-			kitty-themes
-			vlc
+# Desktop apps
+				flameshot
+				spotify-player
+				discord
+				vscode
+				obsidian
+				kitty-themes
+				vlc
+				inputs.superfile.packages.x86_64-linux.default
 
-			libnotify
-			];
-
+# Libs
+				libnotify
+				];
 	system.stateVersion = "24.05"; # Did you read the comment?
 }
