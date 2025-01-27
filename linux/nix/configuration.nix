@@ -180,6 +180,7 @@
 				obsidian
 				kitty-themes
 				vlc
+				bruno
 				inputs.superfile.packages.x86_64-linux.default
 
 # Libs
