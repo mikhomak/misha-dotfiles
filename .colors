@@ -1,8 +1,9 @@
 #!/bin/bash
-
 export BLACK=0xff000000
 export WHITE=0xffffffff
 
+# TRS STANDS FOR TRANSPARENT
+export TRS_BLACK=0xCC000000
 #-------
 # WIN 98
 #-------
@@ -17,5 +18,10 @@ export WIN98_CYAN=0xff06ffff
 #------
 export PINK_LIGHT=0xffFDEBF7
 export PINK_MIDLE=0xffFBCAFF
+export TRS_PINK_MIDLE=0xDDFBCAFF
 export PINK=0xffFFADF0
 export PINK_DARK=0xffFC28FB
+export TRS_PINK_DARK=0x66FC28FB
+export PURPLE_LIGHT=0xffcdb4db
+export BLUE_LIGHT=0xffbde0fe
+export BLUE=0xffa2d2ff

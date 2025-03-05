@@ -105,6 +105,9 @@ case $theme in
 		echo "Installing win98 theme"
 		ln -s -f $BASEDIR/mac/sketchybarrc_win98 $HOME/.config/sketchybar/sketchybarrc
 	;;
+	'cute'|'c'|'C')
+		ln -s -f $BASEDIR/mac/sketchybarrc_cute $HOME/.config/sketchybar/sketchybarrc
+	;;
 	*)
 		ln -s -f $BASEDIR/mac/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
 	;;
@@ -114,7 +117,7 @@ echo "-------"
 
 
 echo "Installing sketchybar plugins..."
-ln -s -f $BASEDIR/mac/sketchybar/plugins/*.sh $HOME/.config/sketchybar/plugins
+ln -s -f $BASEDIR/mac/sketchybar/plugins/* $HOME/.config/sketchybar/plugins
 (test -d $HOME/.config/sketchybar/plugins && echo "Sketchybar plugins is installed ✅") || echo "Sketchybar plugins is not installed!❌"
 echo "-------"
 
