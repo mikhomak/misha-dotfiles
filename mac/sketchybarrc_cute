@@ -15,7 +15,7 @@ FONT_FACE="AurulentSansM Nerd Font"
 
 sketchybar --bar position=top \
 height=33 \
-color=$TRS_PINK_MIDLE \
+color=$TRS \
 topmost=off \
 shadow=5 \
 blur_radius=0.9\

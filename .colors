@@ -3,6 +3,7 @@ export BLACK=0xff000000
 export WHITE=0xffffffff
 
 # TRS STANDS FOR TRANSPARENT
+export TRS=0x00ffffff
 export TRS_BLACK=0xCC000000
 #-------
 # WIN 98
