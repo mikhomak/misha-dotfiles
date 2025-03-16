@@ -96,6 +96,16 @@
 		};
 	};
 
+	xdg = {
+		portal = {
+			enable = true;
+			extraPortals = with pkgs; [
+				xdg-desktop-portal-wlr
+					xdg-desktop-portal-hyprland
+			];
+		};
+	};
+
 	programs.steam = {
 		enable = true;
 		remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -130,61 +140,67 @@
 		nerdfonts
 	];
 
-		environment.systemPackages = with pkgs; [
+	environment.systemPackages = with pkgs; [
 # Main
-			neovim
-				vim
-				git
-				firefox
-				kitty
-				wezterm
-				tmux
+		neovim
+			vim
+			git
+			firefox
+			kitty
+			wezterm
+			tmux
 
 # ZSH and shell
-				oh-my-zsh
-				zsh-powerlevel10k
-				zsh-git-prompt
+			oh-my-zsh
+			zsh-powerlevel10k
+			zsh-git-prompt
 
 # Nix
-				home-manager
-				nix-search-cli
+			home-manager
+			nix-search-cli
 
 # Desktop and tiling manager stuff
-				waybar	
-				dunst
-				swww
+			waybar	
+			dunst
+			swww
 
 # CLI
-				unzip
-				alsa-utils
-				killall
-				lsof
-				xclip
+			unzip
+			alsa-utils
+			killall
+			lsof
+			xclip
 
 # Developing
-				jetbrains.idea-community
-				nodejs_22
-				docker
-				gcc
-				rustup
-				python3
-				openvpn
-				sqlx-cli
-				go
+			jetbrains.idea-community
+			nodejs_22
+			docker
+			gcc
+			rustup
+			python3
+			openvpn
+			sqlx-cli
+			go
 
 # Desktop apps
-				flameshot
-				spotify-player
-				discord
-				vscode
-				obsidian
-				kitty-themes
-				vlc
-				bruno
-				inputs.superfile.packages.x86_64-linux.default
+			flameshot
+			spotify-player
+			discord
+			vscode
+			obsidian
+			kitty-themes
+			vlc
+			bruno
+			inputs.superfile.packages.x86_64-linux.default
+			swappy
+			grim
+			slurp
+			google-chrome
+			opera
+
 
 # Libs
-				libnotify
-				];
+			libnotify
+			];
 	system.stateVersion = "24.05"; # Did you read the comment?
 }

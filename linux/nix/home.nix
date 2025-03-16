@@ -11,13 +11,14 @@
 		home.packages = [
 # fun
 		pkgs.cava
-
+		pkgs.teams-for-linux 
 # werk related
 			pkgs.jdk17
 			pkgs.gradle
 			pkgs.maven
 			pkgs.gettext
 			pkgs.procps
+			pkgs.nodePackages_latest.grunt-cli
 		];
 	home.file = {
 	};
