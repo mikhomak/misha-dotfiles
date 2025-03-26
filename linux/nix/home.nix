@@ -2,7 +2,6 @@
 
 {
 
-
 	home.username = "misha";
 	home.homeDirectory = "/home/misha";
 
@@ -11,9 +10,9 @@
 		home.packages = [
 # fun
 		pkgs.cava
-		pkgs.teams-for-linux 
 # werk related
 			pkgs.jdk17
+			pkgs.teams-for-linux 
 			pkgs.gradle
 			pkgs.maven
 			pkgs.gettext
