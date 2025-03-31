@@ -17,6 +17,10 @@ filetype on
 filetype plugin on
 filetype indent on
 filetype plugin indent on
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd pk
+
 " PLUGINS ---------------------------------------------------------------- {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -26,9 +30,11 @@ endif
 
 call plug#begin()
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'plasticboy/vim-markdown'
 Plug 'rust-lang/rust.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " }}}
 
