@@ -26,6 +26,9 @@ endif
 
 call plug#begin()
 Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
+Plug 'plasticboy/vim-markdown'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 " }}}
 
