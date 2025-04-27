@@ -8,6 +8,8 @@
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
 		home.packages = [
+		#others
+		pkgs.anki
 # fun
 		pkgs.cava
 # werk related

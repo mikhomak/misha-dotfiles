@@ -35,6 +35,7 @@ Plug 'scrooloose/nerdtree' |
 Plug 'plasticboy/vim-markdown'
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
+" TODO TELESCOPE + FZF
 call plug#end()
 " }}}
 
