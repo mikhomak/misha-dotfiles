@@ -19,7 +19,7 @@ filetype indent on
 filetype plugin indent on
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd pk
+" autocmd VimEnter * NERDTree | wincmd pk
 
 " PLUGINS ---------------------------------------------------------------- {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -35,6 +35,10 @@ Plug 'scrooloose/nerdtree' |
 Plug 'plasticboy/vim-markdown'
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " TODO TELESCOPE + FZF
 call plug#end()
 " }}}
