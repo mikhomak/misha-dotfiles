@@ -34,6 +34,9 @@ alias-tips
 #Add this to .zshrc in the begging
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+
+#--------- Other
+export XDG_CONFIG_HOME="$HOME/.config"
 #--------- VARIABLES
 export SSH_DIR="~/.ssh"
 export H="$HOME"

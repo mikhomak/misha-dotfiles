@@ -33,10 +33,29 @@ echo "--------------------------------------------------------------------------
 echo "installing symlinks for dotfiles"
 echo "-----------------------------------------------------------------------------"
 
-echo "Installing vim..."
-ln -s -f $BASEDIR/.vimrc $HOME/.vimrc
-(test -f $HOME/.vimrc && echo "Vimrc is installed ✅") || echo "Vimrc is not installed!❌"
-echo "-------"
+
+echo "Please choose the vim instalation [.vimrc] (V)/(v), [nvim] (N)/(n), [all] (A)/(a)"
+read vim_setting
+case $vim_setting in
+	'V'|'v')
+		echo "Installing .vimrc"
+		ln -s -f $BASEDIR/.vimrc $HOME/.vimrc
+	;;
+	'N'|'n')
+		echo "Installing nvim lua config"
+		ln -s -f $BASEDIR/nvim $HOME/.config/
+	;;
+	'A'|'a')
+		echo "Install .vimrc AND nvim lua config"
+		ln -s -f $BASEDIR/.vimrc $HOME/.vimrc
+		ln -s -f $BASEDIR/nvim $HOME/.config/
+	;;
+	*)
+		echo "Installing .vimrc by default"
+		ln -s -f $BASEDIR/.vimrc $HOME/.vimrc
+	;;
+esac
+
 
 echo "Installing zsh..."
 ln -s -f $BASEDIR/.zshrc $HOME/.zshrc

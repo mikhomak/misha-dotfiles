@@ -170,6 +170,7 @@
 			killall
 			lsof
 			xclip
+			fzf
 
 # Developing
 			jetbrains.idea-community
@@ -203,6 +204,7 @@
 			libnotify
 			openssl
 			gnumake
+			xdg-utils
 			];
 	system.stateVersion = "24.05"; # Did you read the comment?
 }

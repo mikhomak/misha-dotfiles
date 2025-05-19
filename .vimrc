@@ -43,7 +43,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 " }}}
 
-colorscheme gruvbox
+"colorscheme gruvbox
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
 " }}}
