@@ -77,8 +77,8 @@ alias start_ssh_agent="eval `ssh-agent`"
 alias clip="xclip -sel c < "
 
 #--------- VIM
-alias vi="nvim -u ~/.vimrc"
-alias vim="nvim -u ~/.vimrc"
+alias vi="nvim"
+alias vim="nvim"
 
 #--------- GIT
 alias grbod="gfa; git rebase origin/develop"
