@@ -1,6 +1,8 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- Theme
+vim.cmd [[colorscheme wombat]]
 
 -- Line numbering
 vim.opt.nu = true
@@ -17,3 +19,4 @@ vim.opt.fileencoding = "utf-8"
 
 
 vim.keymap.set('n', '<C-f>', ':FZF<CR>')
+
