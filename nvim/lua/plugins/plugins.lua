@@ -8,5 +8,7 @@ return {
 	{"vim-airline/vim-airline",opt ={},},
 	{"vim-airline/vim-airline-themes",opt ={},},
 	{"flazz/vim-colorschemes",opt ={},},
+	{"nvim-telescope/telescope.nvim",opt ={},  dependencies = { 'nvim-lua/plenary.nvim' }},
+	{"scrooloose/nerdtree",opt ={},},
 
 }

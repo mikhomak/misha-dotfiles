@@ -36,7 +36,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 #--------- Other
-export XDG_CONFIG_HOME="$HOME/.config"
+export HOME_CONFIG="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME_CONFIG"
+
 #--------- VARIABLES
 export SSH_DIR="~/.ssh"
 export H="$HOME"
@@ -47,6 +49,7 @@ export HBP="hybris/bin/platform"
 export MISHA_NIX="$MISHA/linux/nix"
 export GIT_EDITOR=vim
 export MISHA_OBSIDIAN="$PROJECTS/misha-obsidian/"
+export MISHA_NVIM="$MISHA/nvim"
 #--------- EDITS
 
 alias reload-zsh="source ~/.zshrc"
@@ -67,6 +70,7 @@ alias cdp="cd $PROJECTS"
 alias cdhbp="cd $HBP" 
 alias cdnix="cd $MISHA_NIX"
 alias cdobsidian="cd $MISHA_OBSIDIAN"
+alias cdnvim="cd $MISHA_NVIM"
 
 #--------- OTHER
 alias cmd="cmd.exe /c "

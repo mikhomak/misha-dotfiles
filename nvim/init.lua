@@ -1,8 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.remap")
 require("config.lazy")
+require("config.telescope")
 
 -- Theme
-vim.cmd [[colorscheme wombat]]
+vim.cmd [[colorscheme contrastneed]]
 
 -- Line numbering
 vim.opt.nu = true
