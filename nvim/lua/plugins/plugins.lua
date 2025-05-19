@@ -10,5 +10,5 @@ return {
 	{"flazz/vim-colorschemes",opt ={},},
 	{"nvim-telescope/telescope.nvim",opt ={},  dependencies = { 'nvim-lua/plenary.nvim' }},
 	{"scrooloose/nerdtree",opt ={},},
-
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }

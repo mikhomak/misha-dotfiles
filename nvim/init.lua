@@ -1,7 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.remap")
 require("config.lazy")
-require("config.telescope")
 
 -- Theme
 vim.cmd [[colorscheme contrastneed]]
@@ -20,5 +19,4 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 
-vim.keymap.set('n', '<C-f>', ':FZF<CR>')
 
