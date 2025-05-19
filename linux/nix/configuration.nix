@@ -205,6 +205,7 @@
 			openssl
 			gnumake
 			xdg-utils
+			ripgrep
 			];
 	system.stateVersion = "24.05"; # Did you read the comment?
 }
