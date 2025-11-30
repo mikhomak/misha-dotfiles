@@ -172,7 +172,7 @@
 			xclip
 			fzf
 
-# Developing
+# development
 			jetbrains.idea-community
 			nodejs_22
 			docker
@@ -182,6 +182,8 @@
 			openvpn
 			sqlx-cli
 			go
+			yarn
+			hoppscotch
 
 # Desktop apps
 			flameshot

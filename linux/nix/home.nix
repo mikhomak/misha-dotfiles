@@ -10,6 +10,7 @@
 		home.packages = [
 		#others
 		pkgs.anki
+		pkgs.tailscale
 # fun
 		pkgs.cava
 # werk related
@@ -20,6 +21,7 @@
 			pkgs.gettext
 			pkgs.procps
 			pkgs.nodePackages_latest.grunt-cli
+			pkgs.visualvm
 		];
 	home.file = {
 	};
