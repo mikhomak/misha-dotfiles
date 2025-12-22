@@ -20,6 +20,7 @@
 	],
 
 	"modules-right": [
+		"hyprland/language",
 		"battery",
 		"network",
 		"cpu",
@@ -85,6 +86,12 @@
 		"format": "{temperatureC}°C "
 	},    
 
+	"hyprland/language":{
+		"format": "{}",
+		"format-ja": "ja",
+		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+		"format-en": "us"
+	},
 	"battery": {
 		"states": {
 			"good": 95,

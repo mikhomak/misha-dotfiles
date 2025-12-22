@@ -22,6 +22,7 @@ window#waybar {
 
 
 #cpu,
+#language,
 #clock,
 #memory,
 #temperature,
@@ -132,6 +133,13 @@ tooltip {
 	background-color: #252422;
 	color: #FFFCF2;
 }
+
+#language {
+	background-color: #CCC5B9;
+	color: #252422;
+	margin-right: 5px;
+}
+
 
 #battery {
 	background-color: #CCC5B9;
