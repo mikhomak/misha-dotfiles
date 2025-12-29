@@ -33,11 +33,22 @@
 		LC_TIME = "es_ES.UTF-8";
 	};
 
-# Configure keymap in X11
-	services.xserver.xkb = {
-		layout = "us";
-		variant = "";
+	i18n.inputMethod = {
+		type = "fcitx5";
+		enable = true;
+		fcitx5.addons = with pkgs; [
+				fcitx5-mozc-ut
+					fcitx5-gtk
+			];
+
 	};
+# in hypr.conf
+# Configure keymap in X11
+#	services.xserver = {
+#		layout = "us,ja,ru";
+#		xkbVariant = ",,";
+#		xkbOptions = "grp:alt_shift_toggle";
+#	};
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.misha = {
@@ -116,6 +127,9 @@
 	environment.sessionVariables = {
 		WLN_NO_HARDWARE_CURSOR = "1";
 		NIXOS_OZON_WL = "1";
+		QT_IM_MODULE = "fcitx";
+		XMODIFIERS = "@im=fcitx";
+		GTK_IM_MODULE = "fcitx";
 	};
 
 	hardware = {
@@ -134,11 +148,22 @@
 	};
 
 
-# $ nix search wget
 
 	fonts.packages = with pkgs; [
 		nerdfonts
+			ipafont
+			kochi-substitute
+			mplus-outline-fonts.osdnRelease
+			noto-fonts-cjk-sans
+			noto-fonts-emoji
 	];
+
+	fonts.fontconfig.defaultFonts = {
+		sansSerif = [ "Noto Sans CJK JP" "Noto Sans" ];
+		serif = [ "Noto Serif CJK JP" "Noto Serif" ];
+		monospace = [ "Noto Sans Mono CJK JP" "Hack Nerd Font" ];
+	};
+
 
 	environment.systemPackages = with pkgs; [
 # Main
@@ -200,6 +225,7 @@
 			slurp
 			google-chrome
 			opera
+			fcitx5-configtool
 
 
 # Libs
