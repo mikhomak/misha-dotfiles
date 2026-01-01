@@ -42,13 +42,6 @@
 			];
 
 	};
-# in hypr.conf
-# Configure keymap in X11
-#	services.xserver = {
-#		layout = "us,ja,ru";
-#		xkbVariant = ",,";
-#		xkbOptions = "grp:alt_shift_toggle";
-#	};
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.misha = {
